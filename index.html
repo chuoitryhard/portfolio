@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cao Minh Thuan | SGU Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass-nav { background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(12px); }
+        .project-card { transition: all 0.3s ease; }
+        .project-card:hover { transform: translateY(-10px); border-color: #3b82f6; box-shadow: 0 10px 30px -15px rgba(59, 130, 246, 0.3); }
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b1121; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+
+        /* --- PHẦN THÊM VÀO ĐỂ HIỆN AVATAR --- */
+        .simple-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #3b82f6;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .simple-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* --- KẾT THÚC PHẦN THÊM AVATAR --- */
+    </style>
+</head>
+<body class="bg-[#0b1121] text-slate-300 font-sans antialiased">
+
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black tracking-tighter text-white">THUAN<span class="text-blue-500">.</span></a>
+            <div class="hidden md:flex space-x-10 text-xs font-bold tracking-widest uppercase">
+                <a href="#home" class="nav-link hover:text-white transition">Home</a>
+                <a href="#skills" class="nav-link hover:text-white transition">Skills</a>
+                <a href="#projects" class="nav-link hover:text-white transition">Projects</a>
+                <a href="#contact" class="nav-link hover:text-white transition">Contact</a>
+            </div>
+            <div class="flex items-center space-x-5">
+                <a href="https://github.com/chuoitryhard" target="_blank" class="text-xl hover:text-blue-400 transition" title="GitHub Profile">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:minhthuancao553@gmail.com" class="text-xl hover:text-blue-400 transition" title="Send Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center px-6 pt-20">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="simple-avatar">
+                <img src="avatar.jpg" alt="Cao Minh Thuan">
+            </div>
+            <p class="text-blue-400 font-mono tracking-widest mb-5">Hello World, my name is</p>
+            <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-6">Cao Minh Thuan.</h1>
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-500 mb-8 leading-tight">Software Engineering Student @ SGU.</h2>
+            <p class="text-lg text-slate-400 max-w-xl mb-12 leading-relaxed">
+                I am a passionate developer currently studying at <span class="text-white font-semibold underline decoration-blue-500 decoration-2">Sai Gon University</span>. 
+                Focused on building automated systems, web applications, and constantly "try-harding" to master new tech stacks.
+            </p>
+            
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded transition shadow-lg shadow-blue-500/20 active:scale-95">
+                    View My Projects
+                </a>
+                <a href="https://drive.google.com/file/d/1oOwlMeLYiNyYqeXjf57UGONrqbjLN9iL/view?usp=sharing" 
+                   target="_blank" 
+                   class="px-8 py-4 border border-blue-500 text-blue-500 font-bold rounded hover:bg-blue-500/10 transition flex items-center gap-2 active:scale-95">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 bg-[#0f172a]/50">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 flex items-center">
+                <span class="text-blue-500 font-mono mr-4 text-xl">01.</span> Tech Stack & Skills
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-12 text-center">
+                <div class="group">
+                    <i class="devicon-python-plain text-6xl text-slate-500 group-hover:text-blue-400 transition-all duration-300"></i>
+                    <p class="mt-4 text-xs font-mono tracking-widest uppercase group-hover:text-white">Python</p>
+                </div>
+                <div class="group">
+                    <i class="devicon-cplusplus-plain text-6xl text-slate-500 group-hover:text-blue-600 transition-all duration-300"></i>
+                    <p class="mt-4 text-xs font-mono tracking-widest uppercase group-hover:text-white">C++</p>
+                </div>
+                <div class="group">
+                    <i class="devicon-javascript-plain text-6xl text-slate-500 group-hover:text-yellow-400 transition-all duration-300"></i>
+                    <p class="mt-4 text-xs font-mono tracking-widest uppercase group-hover:text-white">JavaScript</p>
+                </div>
+                <div class="group">
+                    <i class="devicon-html5-plain text-6xl text-slate-500 group-hover:text-orange-500 transition-all duration-300"></i>
+                    <p class="mt-4 text-xs font-mono tracking-widest uppercase group-hover:text-white">HTML5</p>
+                </div>
+                <div class="group">
+                    <i class="devicon-css3-plain text-6xl text-slate-500 group-hover:text-blue-400 transition-all duration-300"></i>
+                    <p class="mt-4 text-xs font-mono tracking-widest uppercase group-hover:text-white">CSS3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-16 flex items-center">
+                <span class="text-blue-500 font-mono mr-4 text-xl">02.</span> Projects
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-slate-800 project-card group relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-robot text-4xl text-blue-500"></i>
+                        <div class="flex space-x-4 text-slate-400">
+                            <a href="https://github.com/chuoitryhard" target="_blank" class="hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition">Gemini Trading Bot</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                        An automated futures trading system using Python and Gemini AI to optimize entry points and manage risk automatically.
+                    </p>
+                    <div class="flex flex-wrap gap-3 font-mono text-[10px] text-blue-400">
+                        <span>PYTHON</span> <span>AI_API</span> <span>FINTECH</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-slate-800 project-card group relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-6 text-blue-500 text-3xl">
+                        <i class="fa-solid fa-book"></i>
+                        <div class="flex space-x-4 text-slate-400">
+                            <a href="https://github.com/chuoitryhard" target="_blank" class="hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition">E-Book Store</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                        A full-featured bookstore web application with user authentication, shopping cart, and a responsive reading UI.
+                    </p>
+                    <div class="flex flex-wrap gap-3 font-mono text-[10px] text-blue-400">
+                        <span>HTML/CSS</span> <span>JS</span> <span>DATABASE</span>
+                    </div>
+                </div>
+
+                <div class="bg-[#1e293b] p-8 rounded-xl border border-slate-800 project-card group relative overflow-hidden">
+                    <div class="flex justify-between items-start mb-6 text-blue-500 text-3xl">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <div class="flex space-x-4 text-slate-400">
+                            <a href="https://github.com/chuoitryhard" target="_blank" class="hover:text-white"><i class="fa-brands fa-github text-xl"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition">Mobile Shop Web</h3>
+                    <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                        An e-commerce platform specialized for mobile devices, featuring advanced product filtering and modern UI.
+                    </p>
+                    <div class="flex flex-wrap gap-3 font-mono text-[10px] text-blue-400">
+                        <span>TAILWIND</span> <span>JS</span> <span>COMMERCE</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 border-t border-slate-900 text-center">
+        <div class="max-w-2xl mx-auto px-6">
+            <h2 class="text-blue-500 font-mono mb-4 tracking-widest uppercase text-sm">03. What's Next?</h2>
+            <h2 class="text-5xl font-bold text-white mb-8 italic">Get In Touch</h2>
+            <p class="text-slate-400 mb-12">
+                I'm currently looking for internship opportunities where I can apply my Python and Web skills. 
+                My inbox is always open for questions or a simple "Hello".
+            </p>
+            <a href="mailto:minhthuancao553@gmail.com" class="px-12 py-5 border border-blue-500 text-blue-500 hover:bg-blue-500/10 transition font-bold uppercase tracking-widest text-sm rounded active:scale-95 inline-block">
+                Send an Email
+            </a>
+            
+            <div class="mt-24 flex justify-center space-x-10 text-2xl text-slate-500">
+                <a href="https://github.com/chuoitryhard" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            
+            <p class="mt-12 text-[10px] font-mono tracking-[0.3em] uppercase opacity-40">
+                Built by Cao Minh Thuan
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
